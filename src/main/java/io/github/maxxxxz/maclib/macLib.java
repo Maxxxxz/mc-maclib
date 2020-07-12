@@ -2,10 +2,7 @@ package io.github.maxxxxz.maclib;
 
 import io.github.maxxxxz.maclib.util.RegistryHandler;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,18 +18,18 @@ public class macLib
 
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "maclib";
-    public static final ItemGroup TAB = new ItemGroup("Generic Tab")
+    public static final ItemGroup TAB = new ItemGroup("genericTab")
     {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack();
+            return new ItemStack(Items.BEDROCK);
         }
     };
 
     public macLib() {
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+//        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 //        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         RegistryHandler.init();

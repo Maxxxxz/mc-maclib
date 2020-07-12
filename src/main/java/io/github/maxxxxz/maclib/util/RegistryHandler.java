@@ -1,8 +1,10 @@
 package io.github.maxxxxz.maclib.util;
 
+import io.github.maxxxxz.maclib.items.GenericItem;
 import io.github.maxxxxz.maclib.macLib;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,7 +20,10 @@ public class RegistryHandler{
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    // Adding Items
+    // Adding Items (REMOVE AFTER TESTING)
+    public static final RegistryObject<Item> GENERIC_ITEM =
+            ITEMS.register("genericitem", () -> new GenericItem(new Item.Properties().group(macLib.TAB)));
+
 
     // Adding Blocks
 
