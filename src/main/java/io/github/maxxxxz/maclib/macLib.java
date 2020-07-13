@@ -18,7 +18,7 @@ public class macLib
 
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "maclib";
-    public static final ItemGroup TAB = new ItemGroup("genericTab")
+    public static final ItemGroup TAB = new ItemGroup("generic_tab")
     {
         @Override
         public ItemStack createIcon()
