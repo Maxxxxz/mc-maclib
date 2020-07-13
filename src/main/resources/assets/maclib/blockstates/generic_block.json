@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "maclib:block/generic_block" }
+  }
+}
