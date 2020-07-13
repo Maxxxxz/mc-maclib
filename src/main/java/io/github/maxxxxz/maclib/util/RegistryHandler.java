@@ -11,8 +11,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegistryHandler{
 
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, macLib.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, macLib.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, macLib.MOD_ID);//new DeferredRegister<>(ForgeRegistries.ITEMS, macLib.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, macLib.MOD_ID);//new DeferredRegister<>(ForgeRegistries.BLOCKS, macLib.MOD_ID);
 
     public static void init()
     {
@@ -20,14 +20,18 @@ public class RegistryHandler{
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    // Adding Items (REMOVE AFTER TESTING)
+    // Adding Items (comment out AFTER TESTING)
     public static final RegistryObject<Item> GENERIC_ITEM =
             ITEMS.register("genericitem", () -> new GenericItem(new Item.Properties().group(macLib.TAB)));
 
-
     // Adding Blocks
+    public static final RegistryObject<Block> GENERIC_BLOCK =
+            BLOCKS.register("genericblock", () -> new GenericBlock());
+
 
     // Adding Block Items
 
+
+    // Adding Fluids
 
 }
