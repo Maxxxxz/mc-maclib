@@ -43,7 +43,7 @@ public class ComplexBlock extends Block {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         LOGGER.info("Acitvated!");
-        NetworkHooks.openGui(player, , pos);
+//        NetworkHooks.openGui(player, , pos);
         return ActionResultType.SUCCESS;
     }
 }
